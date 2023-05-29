@@ -1,11 +1,11 @@
-import React from 'react';
-import { CardField } from '@/types';
-import { CARD_COMPANIES } from '@/constants';
-import Card from './Card';
+import React from "react";
+import { CardField } from "@/types";
+import { CARD_COMPANIES } from "@/constants";
+import Card from "./Card";
 
 type CardProps = {
-  size: 'small' | 'big';
-  card: Omit<CardField, 'cardPassword' | 'cvc'>;
+  size: "small" | "big";
+  card: Omit<CardField, "cardPassword" | "cvc">;
 };
 
 const CompanyCard = ({ size, card }: CardProps) => {
@@ -17,8 +17,8 @@ const CompanyCard = ({ size, card }: CardProps) => {
     cardCompany,
   } = card;
 
-  const cardName = cardCompany ? CARD_COMPANIES[cardCompany].name : '';
-  const cardColor = cardCompany ? CARD_COMPANIES[cardCompany].color : 'gray1';
+  const cardName = cardCompany ? CARD_COMPANIES[cardCompany].name : "";
+  const cardColor = cardCompany ? CARD_COMPANIES[cardCompany].color : "gray1";
 
   return (
     <Card

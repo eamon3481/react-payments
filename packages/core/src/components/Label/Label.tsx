@@ -1,5 +1,5 @@
-import React from 'react';
-import { LabelText } from './Label.style';
+import React from "react";
+import { LabelText } from "./Label.style";
 
 type LabelProps = {
   labelText: string;

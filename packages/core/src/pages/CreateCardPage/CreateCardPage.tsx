@@ -1,15 +1,12 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
 
-import { Header } from '@/components';
-import { RightArrowIcon } from '@/assets';
-import { CardFields, PreviewCard, CardFieldProvider } from './components';
+import { Header } from "@/components";
+import { RightArrowIcon } from "@/assets";
+import { CardFields, PreviewCard, CardFieldProvider } from "./components";
 
 const CreateCardPage = () => {
-  const navigate = useNavigate();
-
   const handleClick = () => {
-    navigate(-1);
+    //
   };
   return (
     <>

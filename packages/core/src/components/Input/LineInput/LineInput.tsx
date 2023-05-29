@@ -1,7 +1,7 @@
-import React, { ChangeEvent } from 'react';
-import { StyledLineInput } from './LineInput.style';
-import { Colors } from '@/styles/colors';
-import { TextInputProps } from '../type';
+import React, { ChangeEvent } from "react";
+import { StyledLineInput } from "./LineInput.style";
+import { Colors } from "@/styles/colors";
+import { TextInputProps } from "../type";
 
 interface LineInputProps extends TextInputProps {
   lineColor?: Colors;
@@ -13,12 +13,12 @@ const LineInput = (
     value,
     onChange,
     placeholder,
-    fontColor = 'gray3',
-    lineColor = 'gray3',
+    fontColor = "gray3",
+    lineColor = "gray3",
     format,
-    textAlign = 'left',
-    width = '100%',
-    type = 'text',
+    textAlign = "left",
+    width = "100%",
+    type = "text",
     ...InputProps
   }: LineInputProps,
   ref?: React.Ref<HTMLInputElement>

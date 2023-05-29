@@ -1,2 +1,1 @@
-export * from './createCard';
-export * from './route';
+export * from "./createCard";

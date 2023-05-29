@@ -1,9 +1,10 @@
-import { CardInfo } from '@/types';
-import React, { createContext, useReducer } from 'react';
-import cardListReducer, { CardListAction } from './CardListReducer';
+import { CardInfo } from "@/types";
+import React, { createContext, useReducer } from "react";
+import cardListReducer, { CardListAction } from "./CardListReducer";
 
-export const CardListContext =
-  createContext<[CardInfo[], React.Dispatch<CardListAction>] | null>(null);
+export const CardListContext = createContext<
+  [CardInfo[], React.Dispatch<CardListAction>] | null
+>(null);
 
 const initialState: CardInfo[] = [];
 

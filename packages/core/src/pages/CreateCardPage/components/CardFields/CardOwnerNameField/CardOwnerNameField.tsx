@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import { Label, Input } from '@/components';
-import { ACTION, useCardFieldDispatchContext } from '../../CardFieldContext';
-import { Colors } from '@/styles/colors';
-import { LABEL_TEXT, PLACEHOLDER_TEXT } from '@/constants';
+import { Label, Input } from "@/components";
+import { ACTION, useCardFieldDispatchContext } from "../../CardFieldContext";
+import { Colors } from "@/styles/colors";
+import { LABEL_TEXT, PLACEHOLDER_TEXT } from "@/constants";
 
 type CardOwnerNameFieldProps = {
   ownerName: string;

@@ -1,18 +1,14 @@
-import React from 'react';
-import { Header } from '@/components/Header';
-import { useNavigate } from 'react-router-dom';
-import { useCardList } from '@/store';
-import { ROUTE } from '@/constants';
-import { EmptyCardButton } from '@/components';
-import styled from '@emotion/styled';
-import { CardItem } from './components';
+import { Header } from "@/components/Header";
+import { useCardList } from "@/store";
+import { EmptyCardButton } from "@/components";
+import styled from "@emotion/styled";
+import { CardItem } from "./components";
 
 const CardListPage = () => {
-  const navigate = useNavigate();
   const cardList = useCardList();
 
   const handleClick = () => {
-    navigate(ROUTE.CARD_CREATE);
+    //
   };
   return (
     <>

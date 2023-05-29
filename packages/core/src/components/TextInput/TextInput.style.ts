@@ -1,7 +1,7 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 export const StyledTextInput = styled.input<{
-  textAlign: 'left' | 'center' | 'right';
+  textAlign: "left" | "center" | "right";
   color: string;
   width: string;
 }>`

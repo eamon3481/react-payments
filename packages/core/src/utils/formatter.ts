@@ -3,15 +3,15 @@ export const addSeparatorsToNumber = (
   separator: string,
   sectionLength: number
 ) => {
-  const chunks = str.match(new RegExp(`.{1,${sectionLength}}`, 'g')) || [];
+  const chunks = str.match(new RegExp(`.{1,${sectionLength}}`, "g")) || [];
   return chunks.join(separator);
 };
 
-export const SEPARATOR = ' / ';
+export const SEPARATOR = " / ";
 export const addSeparator = (str: string) =>
   addSeparatorsToNumber(str, SEPARATOR, 2);
 
-export const DASH = ' - ';
+export const DASH = " - ";
 const CardNumberSectionLength = 4;
 
 export const addCardNumberDashes = (str: string) =>
@@ -29,6 +29,6 @@ const replaceCardNumber = (replaceStr: string) => (str: string) => {
     .join(DASH);
 };
 
-export const replaceCardNumberToDot = replaceCardNumber('•');
+export const replaceCardNumberToDot = replaceCardNumber("•");
 
-export const replaceCardNumberToO = replaceCardNumber('o');
+export const replaceCardNumberToO = replaceCardNumber("o");

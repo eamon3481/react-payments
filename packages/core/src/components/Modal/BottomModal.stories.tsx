@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import BottomModal from './BottomModal';
+import BottomModal from "./BottomModal";
 
 export default {
-  title: 'BottomModal',
+  title: "BottomModal",
   component: BottomModal,
 } as ComponentMeta<typeof BottomModal>;
 

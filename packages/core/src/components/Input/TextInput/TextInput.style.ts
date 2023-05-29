@@ -1,8 +1,8 @@
-import { Colors } from '@/styles/colors';
-import styled from '@emotion/styled';
+import { Colors } from "@/styles/colors";
+import styled from "@emotion/styled";
 
 export const StyledTextInput = styled.input<{
-  textAlign: 'left' | 'center' | 'right';
+  textAlign: "left" | "center" | "right";
   fontColor: Colors;
   width: string;
   isError?: boolean;
@@ -14,7 +14,7 @@ export const StyledTextInput = styled.input<{
   padding: 12px;
   width: ${({ width }) => width};
   border: ${({ isError, theme }) =>
-    isError ? `1.5px solid ${theme.colors.error}` : 'none'};
+    isError ? `1.5px solid ${theme.colors.error}` : "none"};
 
   text-align: ${({ textAlign }) => textAlign};
   color: ${({ fontColor, theme }) => theme.colors[fontColor]};

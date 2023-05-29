@@ -1,6 +1,6 @@
-import { Colors } from '@/styles/colors';
-import styled from '@emotion/styled';
-import React from 'react';
+import { Colors } from "@/styles/colors";
+import styled from "@emotion/styled";
+import React from "react";
 type ColorCircleRadioProps = {
   color: Colors;
   label: string;

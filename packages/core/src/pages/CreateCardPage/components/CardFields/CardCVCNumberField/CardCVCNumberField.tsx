@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import React from "react";
+import styled from "@emotion/styled";
 
-import { Input, Label } from '@/components';
-import { ACTION, useCardFieldDispatchContext } from '../../CardFieldContext';
-import { LABEL_TEXT } from '@/constants';
-import { Colors } from '@/styles/colors';
-import { CircleQuestionIcon } from '@/assets';
-import { isNotNumber } from '@/utils/validate';
+import { Input, Label } from "@/components";
+import { ACTION, useCardFieldDispatchContext } from "../../CardFieldContext";
+import { LABEL_TEXT } from "@/constants";
+import { Colors } from "@/styles/colors";
+import { CircleQuestionIcon } from "@/assets";
+import { isNotNumber } from "@/utils/validate";
 
 type CardCVCNumberFieldProps = {
   cvc: string;
@@ -15,7 +15,7 @@ type CardCVCNumberFieldProps = {
 
 const CardCVCNumberField = ({ cvc, fontColor }: CardCVCNumberFieldProps) => {
   const CVC_NUMBER_LIMIT = 3;
-  const CVC_NUMBER_INPUT_WIDTH = '84px';
+  const CVC_NUMBER_INPUT_WIDTH = "84px";
 
   const dispatch = useCardFieldDispatchContext();
 

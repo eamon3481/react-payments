@@ -27,10 +27,12 @@
     "jsxImportSource": "@emotion/react",
     "noEmit": true,
     "jsx": "react-jsx",
+    "types": [
+      "vite-plugin-svgr/client"
+    ]
   },
   "include": [
     "src",
-    "src/router.tsx",
     "emotion.d.ts"
   ],
   "references": [

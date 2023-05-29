@@ -1,9 +1,9 @@
-import { CompanyCard } from '@/components/Card';
-import styled from '@emotion/styled';
-import React, { useCallback, useMemo, useState } from 'react';
-import { useCardFieldContext } from '../CardFieldContext';
-import { BottomModal } from '@/components/Modal';
-import CardCompanySelectFormModal from '../CardCompanySelectModal/CardCompanySelectModal';
+import { CompanyCard } from "@/components/Card";
+import styled from "@emotion/styled";
+import React, { useCallback, useMemo, useState } from "react";
+import { useCardFieldContext } from "../CardFieldContext";
+import { BottomModal } from "@/components/Modal";
+import CardCompanySelectFormModal from "../CardCompanySelectModal/CardCompanySelectModal";
 
 const PreviewCard = () => {
   const data = useCardFieldContext();

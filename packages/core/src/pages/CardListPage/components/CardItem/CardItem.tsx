@@ -1,18 +1,18 @@
-import { CompanyCard } from '@/components';
-import { ROUTE } from '@/constants';
-import { CARD_LIST_ACTION, useCardListDispatch } from '@/store';
-import { CardInfo } from '@/types';
-import styled from '@emotion/styled';
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { CompanyCard } from "@/components";
+import { ROUTE } from "@/constants/route";
+import { CARD_LIST_ACTION, useCardListDispatch } from "@/store";
+import { ROUTE_ACTION } from "@/store/CardListAction";
+import useRouterPush from "@/store/hooks/useRouterPush";
+import { CardInfo } from "@/types";
+import styled from "@emotion/styled";
+import React from "react";
 
 const CardItem = ({ card }: { card: CardInfo }) => {
-  const navigate = useNavigate();
-
   const dispatch = useCardListDispatch();
+  const push = useRouterPush();
 
   const handleClick = () => {
-    navigate(ROUTE.CARD_NICKNAME_EDIT(card.id));
+    push(ROUTE_ACTION.PUSH_CARD_ID(ROUTE.CARD_NICKNAME_EDIT, card.id));
   };
 
   const handleDelete = () => {
@@ -30,10 +30,6 @@ const CardItem = ({ card }: { card: CardInfo }) => {
     </StyledCardItem>
   );
 };
-
-export default React.memo(CardItem, (prevProps, nextProps) => {
-  return prevProps.card.id === nextProps.card.id;
-});
 
 const CardItemBottom = styled.div`
   display: flex;
@@ -66,3 +62,7 @@ const StyledCardItem = styled.li`
   justify-content: center;
   flex-direction: column;
 `;
+
+export default React.memo(CardItem, (prevProps, nextProps) => {
+  return prevProps.card.id === nextProps.card.id;
+});

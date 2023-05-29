@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import EmptyCardButton from './EmptyCardButton';
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+import EmptyCardButton from "./EmptyCardButton";
 
 export default {
-  title: 'EmptyCardButton',
+  title: "EmptyCardButton",
   component: EmptyCardButton,
 } as ComponentMeta<typeof EmptyCardButton>;
 
@@ -15,5 +15,5 @@ const Template: ComponentStory<typeof EmptyCardButton> = (args) => (
 export const Default = Template.bind({});
 
 Default.args = {
-  onClick: () => alert('버튼 클릭'),
+  onClick: () => alert("버튼 클릭"),
 };

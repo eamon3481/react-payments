@@ -1,14 +1,14 @@
-import { CardInfo } from '@/types';
+import { CardInfo } from "@/types";
 
 export type AppendNewCardAction = {
-  type: 'APPEND';
+  type: "APPEND";
   payload: {
     value: CardInfo;
   };
 };
 
 export type UpdateCardAction = {
-  type: 'UPDATE';
+  type: "UPDATE";
   payload: {
     id: number;
     key: keyof CardInfo;
@@ -17,7 +17,7 @@ export type UpdateCardAction = {
 };
 
 export type DeleteCardAction = {
-  type: 'DELETE';
+  type: "DELETE";
   payload: {
     id: number;
   };
@@ -30,9 +30,11 @@ export type CardListAction =
 
 const cardListReducer = (state: CardInfo[], action: CardListAction) => {
   switch (action.type) {
-    case 'UPDATE':
+    case "UPDATE":
+      // eslint-disable-next-line no-case-declarations
       const targetCard = state.find((card) => card.id === action.payload.id);
-      if (!targetCard) throw new Error('targetCard is not found');
+      if (!targetCard) throw new Error("targetCard is not found");
+      // eslint-disable-next-line no-case-declarations
       const hasKey = action.payload.key in targetCard;
       if (!hasKey)
         throw new Error(`${action.payload.key} is not a key of CardInfo`);
@@ -47,16 +49,16 @@ const cardListReducer = (state: CardInfo[], action: CardListAction) => {
         return card;
       });
 
-    case 'APPEND':
+    case "APPEND":
       return [...state, action.payload.value];
 
-    case 'DELETE':
+    case "DELETE":
       if (!state.find((card) => card.id === action.payload.id))
-        throw new Error('DELETE : targetCard is not found');
+        throw new Error("DELETE : targetCard is not found");
       return state.filter((card) => card.id !== action.payload.id);
 
     default:
-      throw new Error('Unhandled action');
+      throw new Error("Unhandled action");
   }
 };
 

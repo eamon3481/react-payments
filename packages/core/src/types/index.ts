@@ -1,4 +1,4 @@
-import { CARD_COMPANIES } from '@/constants';
+import { CARD_COMPANIES } from "@/constants";
 
 export interface CardField {
   cardNumber: string;

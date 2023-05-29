@@ -1,16 +1,17 @@
-import React from 'react';
-
-import { TextButton } from '@/components';
-import styled from '@emotion/styled';
-import PreviewCompleteCard from './components/PreviewCompleteCard/PreviewCompleteCard';
-import CardNicknameEdit from './components/CardNicknameEdit/CardNicknameEdit';
-import { useParams } from 'react-router-dom';
+import { TextButton } from "@/components";
+import styled from "@emotion/styled";
+import PreviewCompleteCard from "./components/PreviewCompleteCard/PreviewCompleteCard";
+import CardNicknameEdit from "./components/CardNicknameEdit/CardNicknameEdit";
+import useRouter from "@/store/hooks/useRouter";
 
 const CardCreateCompletePage = () => {
-  const params = useParams<{ cardId: string }>();
-  const cardId = Number(params.cardId);
+  // const params = useParams<{ cardId: string }>();
+  // const cardId = Number(params.cardId);
 
-  const cardNicknameFormId = 'cardNicknameForm';
+  const { slug: cardId } = useRouter();
+
+  const cardNicknameFormId = "cardNicknameForm";
+  if (!cardId) return <div>카드 등록이 완료되지 않았습니다.</div>;
 
   return (
     <CardCreateCompleteContainer>

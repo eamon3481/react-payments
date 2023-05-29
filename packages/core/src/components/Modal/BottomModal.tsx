@@ -1,7 +1,7 @@
-import styled from '@emotion/styled';
-import React, { PropsWithChildren, cloneElement, useState } from 'react';
-import { keyframes } from '@emotion/react';
-import Modal from './Modal';
+import styled from "@emotion/styled";
+import React, { PropsWithChildren, cloneElement, useState } from "react";
+import { keyframes } from "@emotion/react";
+import Modal from "./Modal";
 
 export interface ModalChildrenProps {
   onClose: () => void;

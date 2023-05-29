@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 import {
   addCardNumberDashes,
   addSeparator,
   replaceCardNumberToO,
-} from '@/utils/formatter';
+} from "@/utils/formatter";
 import {
   CardBottom,
   CardChip,
@@ -14,14 +14,14 @@ import {
   CardBottomNumber,
   CardBottomInfo,
   CardName,
-} from './Card.style';
-import { CardField } from '@/types';
-import { Colors } from '@/styles/colors';
+} from "./Card.style";
+import { CardField } from "@/types";
+import { Colors } from "@/styles/colors";
 
 type CardProps = {
-  size: 'small' | 'big';
+  size: "small" | "big";
 
-  card: Omit<CardField, 'cardPassword' | 'cvc' | 'cardCompany'> & {
+  card: Omit<CardField, "cardPassword" | "cvc" | "cardCompany"> & {
     cardName: string;
     cardColor: Colors;
   };

@@ -1,5 +1,5 @@
-import React from 'react';
-import { HeaderContainer, LeftIconButton } from './Header.style';
+import React from "react";
+import { HeaderContainer, LeftIconButton } from "./Header.style";
 
 type HeaderProps = {
   title: string;

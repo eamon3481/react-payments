@@ -1,10 +1,10 @@
-import { Input, Label } from '@/components';
-import React from 'react';
-import { ACTION, useCardFieldDispatchContext } from '../../CardFieldContext';
-import { SEPARATOR, addSeparator } from '@/utils/formatter';
-import { isMonth, isNotNumber } from '@/utils/validate';
-import { LABEL_TEXT, PLACEHOLDER_TEXT } from '@/constants';
-import { Colors } from '@/styles/colors';
+import { Input, Label } from "@/components";
+import React from "react";
+import { ACTION, useCardFieldDispatchContext } from "../../CardFieldContext";
+import { SEPARATOR, addSeparator } from "@/utils/formatter";
+import { isMonth, isNotNumber } from "@/utils/validate";
+import { LABEL_TEXT, PLACEHOLDER_TEXT } from "@/constants";
+import { Colors } from "@/styles/colors";
 
 type CardExpirationDateFieldProps = {
   expirationMonth: string;
@@ -20,8 +20,8 @@ const CardExpirationDateField = ({
   const dispatch = useCardFieldDispatchContext();
 
   const EXPIRATION_DATE_INPUT_LENGTH = 4 + SEPARATOR.length;
-  const EXPIRATION_DATE_INPUT_WIDTH = '137px';
-  const ERROR_MESSAGE = '유효하지 않은 월입니다.';
+  const EXPIRATION_DATE_INPUT_WIDTH = "137px";
+  const ERROR_MESSAGE = "유효하지 않은 월입니다.";
   const limitLength = 2;
 
   const [isError, setIsError] = React.useState(false);
@@ -29,7 +29,7 @@ const CardExpirationDateField = ({
   const handleChange = (value: string) => {
     if (!dispatch) return;
     if (isError) setIsError(false);
-    const currentInput = value.replace(SEPARATOR, '');
+    const currentInput = value.replace(SEPARATOR, "");
     const lastValue = currentInput[currentInput.length - 1];
 
     const 숫자외에입력 = currentInput.length !== 0 && isNotNumber(lastValue);

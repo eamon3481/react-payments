@@ -1,5 +1,5 @@
-import React from 'react';
-import { EmptyCardButtonContainer } from './EmptyCardButton.style';
+import React from "react";
+import { EmptyCardButtonContainer } from "./EmptyCardButton.style";
 
 type EmptyCardButtonProps = {
   onClick: () => void;

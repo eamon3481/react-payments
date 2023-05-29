@@ -1,22 +1,23 @@
-import React from 'react';
-import { useCardFieldContext } from '../CardFieldContext/CardFieldContext';
-import { CardNumberField } from './CardNumberField';
-import { CardOwnerNameField } from './CardOwnerNameField';
-import { CardCVCNumberField } from './CardCVCNumberField';
-import { CardPasswordField } from './CardPasswordField';
-import { CardExpirationDateField } from './CardExpirationDateField';
-import { CARD_COMPANIES, ROUTE } from '@/constants';
-import styled from '@emotion/styled';
-import { TextButton } from '@/components';
-import { CardField } from '@/types';
-import { useNavigate } from 'react-router-dom';
-import { CARD_LIST_ACTION, useCardListDispatch } from '@/store';
-import { isMonth } from '@/utils/validate';
+import { useCardFieldContext } from "../CardFieldContext/CardFieldContext";
+import { CardNumberField } from "./CardNumberField";
+import { CardOwnerNameField } from "./CardOwnerNameField";
+import { CardCVCNumberField } from "./CardCVCNumberField";
+import { CardPasswordField } from "./CardPasswordField";
+import { CardExpirationDateField } from "./CardExpirationDateField";
+import { CARD_COMPANIES } from "@/constants";
+import styled from "@emotion/styled";
+import { TextButton } from "@/components";
+import { CardField } from "@/types";
+import { CARD_LIST_ACTION, useCardListDispatch } from "@/store";
+import { isMonth } from "@/utils/validate";
+import useRouterPush from "@/store/hooks/useRouterPush";
+import { ROUTE_ACTION } from "@/store/CardListAction";
+import { ROUTE } from "@/constants/route";
 
 const CardFields = () => {
   const data = useCardFieldContext();
-  const navigate = useNavigate();
   const dispatch = useCardListDispatch();
+  const push = useRouterPush();
 
   if (data === null) return null;
 
@@ -31,12 +32,12 @@ const CardFields = () => {
   } = data;
 
   const fontColor =
-    cardCompany !== null ? CARD_COMPANIES[cardCompany].color : 'gray3';
+    cardCompany !== null ? CARD_COMPANIES[cardCompany].color : "gray3";
 
   const handleNextButtonClick = () => {
     const uniqueId = Date.now();
     dispatch(CARD_LIST_ACTION.APPEND_NEW_CARD(uniqueId, data));
-    navigate(ROUTE.CARD_CREATE_COMPLETE(uniqueId));
+    push(ROUTE_ACTION.PUSH_CARD_ID(ROUTE.CARD_CREATE_COMPLETE, uniqueId));
   };
   return (
     <CardFieldForm>

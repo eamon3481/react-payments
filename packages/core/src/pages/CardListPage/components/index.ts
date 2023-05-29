@@ -1,1 +1,1 @@
-export { default as CardItem } from './CardItem/CardItem';
+export { default as CardItem } from "./CardItem/CardItem";

@@ -1,7 +1,7 @@
-import React from 'react';
-import { CompanyCard } from '@/components';
-import useCard from '@/store/hooks/useCard';
-import styled from '@emotion/styled';
+import React from "react";
+import { CompanyCard } from "@/components";
+import useCard from "@/store/hooks/useCard";
+import styled from "@emotion/styled";
 
 type PreviewCompleteCardProps = {
   title: string;

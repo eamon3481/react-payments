@@ -1,10 +1,9 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { CARD_COMPANIES, PLACEHOLDER_TEXT, ROUTE } from '@/constants';
-import { CARD_LIST_ACTION, useCardListDispatch } from '@/store';
-import useCard from '@/store/hooks/useCard';
-import styled from '@emotion/styled';
-import { Input } from '@/components';
+import React from "react";
+import { CARD_COMPANIES, PLACEHOLDER_TEXT } from "@/constants";
+import { CARD_LIST_ACTION, useCardListDispatch } from "@/store";
+import useCard from "@/store/hooks/useCard";
+import styled from "@emotion/styled";
+import { Input } from "@/components";
 
 type CardNicknameEditProps = {
   formId: string;
@@ -13,7 +12,6 @@ type CardNicknameEditProps = {
 
 const CardNicknameEdit = ({ formId, cardId }: CardNicknameEditProps) => {
   const { cardCompany, cardNickname } = useCard(cardId);
-  const navigate = useNavigate();
   const dispatch = useCardListDispatch();
   const maxCardNicknameLength = 10;
 
@@ -27,7 +25,7 @@ const CardNicknameEdit = ({ formId, cardId }: CardNicknameEditProps) => {
         cardNickname ? cardNickname : CARD_COMPANIES[cardCompany].name
       )
     );
-    navigate(ROUTE.CARD);
+    // 카드 리스트 페이지로 이동
   };
   return (
     <StyledForm id={formId} onSubmit={handleSubmit}>

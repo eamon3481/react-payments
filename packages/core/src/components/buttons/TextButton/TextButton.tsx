@@ -1,11 +1,11 @@
-import React from 'react';
-import { StyledTextButton } from './TextButton.style';
-import { Colors } from '@/styles/colors';
+import React from "react";
+import { StyledTextButton } from "./TextButton.style";
+import { Colors } from "@/styles/colors";
 
 type TextButtonProps = {
   text: string;
   disabled?: boolean;
-  type?: 'button' | 'submit' | 'reset';
+  type?: "button" | "submit" | "reset";
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   label?: string;
   form?: string;
@@ -16,7 +16,7 @@ const TextButton = ({
   onClick,
   text,
   disabled,
-  color = 'primary',
+  color = "primary",
   type,
   label,
   form,

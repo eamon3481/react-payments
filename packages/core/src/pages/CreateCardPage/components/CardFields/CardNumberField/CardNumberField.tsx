@@ -1,14 +1,14 @@
-import { Label, Input } from '@/components';
-import React, { useCallback } from 'react';
-import { useCardFieldDispatchContext } from '../../CardFieldContext/CardFieldContext';
-import { ACTION } from '../../CardFieldContext/CardFieldAction';
+import { Label, Input } from "@/components";
+import React, { useCallback } from "react";
+import { useCardFieldDispatchContext } from "../../CardFieldContext/CardFieldContext";
+import { ACTION } from "../../CardFieldContext/CardFieldAction";
 import {
   DASH,
   addCardNumberDashes,
   replaceCardNumberToDot,
-} from '@/utils/formatter';
-import { LABEL_TEXT } from '@/constants';
-import { Colors } from '@/styles/colors';
+} from "@/utils/formatter";
+import { LABEL_TEXT } from "@/constants";
+import { Colors } from "@/styles/colors";
 
 type CardNumberFieldProps = {
   cardNumber: string;
@@ -31,7 +31,7 @@ function CardNumberField({ cardNumber, fontColor }: CardNumberFieldProps) {
       return;
     }
 
-    const isNotNumber = Number.isNaN(+newValue) || newValue === ' ';
+    const isNotNumber = Number.isNaN(+newValue) || newValue === " ";
 
     if (isNotNumber) return;
 

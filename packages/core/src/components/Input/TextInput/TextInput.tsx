@@ -1,6 +1,6 @@
-import React, { ChangeEvent } from 'react';
-import { ErrorMessage, StyledTextInput } from './TextInput.style';
-import { TextInputProps } from '../type';
+import React, { ChangeEvent } from "react";
+import { ErrorMessage, StyledTextInput } from "./TextInput.style";
+import { TextInputProps } from "../type";
 
 const TextInput = (
   {
@@ -8,11 +8,11 @@ const TextInput = (
     value,
     onChange,
     placeholder,
-    fontColor = 'gray3',
+    fontColor = "gray3",
     format,
-    textAlign = 'left',
-    width = '100%',
-    type = 'text',
+    textAlign = "left",
+    width = "100%",
+    type = "text",
     isError,
     errorMessage,
     ...InputProps

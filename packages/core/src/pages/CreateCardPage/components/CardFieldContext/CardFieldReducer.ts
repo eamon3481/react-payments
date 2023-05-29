@@ -1,6 +1,6 @@
-import { CardField } from '@/types';
+import { CardField } from "@/types";
 
-type CardFieldActionTypes = 'UPDATE' | 'APPEND' | 'DELETE';
+type CardFieldActionTypes = "UPDATE" | "APPEND" | "DELETE";
 
 export type CardFieldAction = {
   type: CardFieldActionTypes;
@@ -16,22 +16,22 @@ const cardFieldReducer = (state: CardField, action: CardFieldAction) => {
     throw new Error(`${action.payload.key} is not a key of CardFieldReducer`);
 
   switch (action.type) {
-    case 'UPDATE':
+    case "UPDATE":
       return {
         ...state,
         [action.payload.key]: action.payload.value,
       };
 
-    case 'APPEND':
+    case "APPEND":
       return {
         ...state,
         [action.payload.key]: state[action.payload.key] + action.payload.value,
       };
 
-    case 'DELETE':
+    case "DELETE":
       const fieldState = state[action.payload.key];
-      if (typeof fieldState !== 'string') {
-        throw new Error('state[action.payload.key] is not a string');
+      if (typeof fieldState !== "string") {
+        throw new Error("state[action.payload.key] is not a string");
       }
       return {
         ...state,

@@ -1,8 +1,8 @@
-import { Colors } from '@/styles/colors';
-import styled from '@emotion/styled';
+import { Colors } from "@/styles/colors";
+import styled from "@emotion/styled";
 
 export const StyledLineInput = styled.input<{
-  textAlign: 'left' | 'center' | 'right';
+  textAlign: "left" | "center" | "right";
   fontColor: Colors;
   lineColor: Colors;
   width: string;

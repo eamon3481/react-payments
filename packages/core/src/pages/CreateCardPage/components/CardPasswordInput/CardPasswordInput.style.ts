@@ -1,5 +1,5 @@
-import { Colors } from '@/styles/colors';
-import styled from '@emotion/styled';
+import { Colors } from "@/styles/colors";
+import styled from "@emotion/styled";
 
 export const CardPasswordDot = styled.div<{
   size: string;

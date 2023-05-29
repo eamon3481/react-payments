@@ -1,5 +1,5 @@
-import { Colors } from '@/styles/colors';
-import styled from '@emotion/styled';
+import { Colors } from "@/styles/colors";
+import styled from "@emotion/styled";
 
 export const CardTop = styled.div`
   width: 100%;
@@ -28,10 +28,10 @@ export const CardBottom = styled.div`
 `;
 
 export const CardChip = styled.div<{
-  size: 'small' | 'big';
+  size: "small" | "big";
 }>`
-  width: ${({ size }) => (size === 'big' ? '55.04px' : '40px')};
-  height: ${({ size }) => (size === 'big' ? '35.77px' : '26px')};
+  width: ${({ size }) => (size === "big" ? "55.04px" : "40px")};
+  height: ${({ size }) => (size === "big" ? "35.77px" : "26px")};
 
   font-size: 24px;
 
@@ -40,7 +40,7 @@ export const CardChip = styled.div<{
 `;
 
 export const CardContainer = styled.div<{
-  size: 'small' | 'big';
+  size: "small" | "big";
   cardColor: Colors;
 }>`
   display: flex;
@@ -48,8 +48,8 @@ export const CardContainer = styled.div<{
   align-items: center;
   justify-content: center;
 
-  width: ${({ size }) => (size === 'big' ? '290px' : '208px')};
-  height: ${({ size }) => (size === 'big' ? '180px' : '130px')};
+  width: ${({ size }) => (size === "big" ? "290px" : "208px")};
+  height: ${({ size }) => (size === "big" ? "180px" : "130px")};
 
   background: ${({ theme, cardColor }) => theme.colors[cardColor]};
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
@@ -78,11 +78,11 @@ export const CardName = styled.p`
   font-size: 10px;
 `;
 export const CardText = styled.div<{
-  size: 'small' | 'big';
+  size: "small" | "big";
 }>`
   margin: 0 16px;
-  font-size: ${({ size }) => (size === 'big' ? '18px' : '14px')};
-  line-height: ${({ size }) => (size === 'big' ? '20px' : '16px')};
+  font-size: ${({ size }) => (size === "big" ? "18px" : "14px")};
+  line-height: ${({ size }) => (size === "big" ? "20px" : "16px")};
   vertical-align: middle;
   font-weight: 400;
 `;

@@ -1,5 +1,5 @@
-import { CARD_COMPANIES, CARD_COMPANIES_ARRAY } from '@/constants';
-import { CardField } from '@/types';
+import { CARD_COMPANIES, CARD_COMPANIES_ARRAY } from "@/constants";
+import { CardField } from "@/types";
 
 export const typedKeysOf = <T extends Record<string, any>>(
   obj: T

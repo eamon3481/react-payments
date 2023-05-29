@@ -1,18 +1,18 @@
-import { CardField } from '@/types';
-import React, { createContext, useContext, useMemo, useReducer } from 'react';
-import cardFieldReducer, { CardFieldAction } from './CardFieldReducer';
+import { CardField } from "@/types";
+import React, { createContext, useContext, useMemo, useReducer } from "react";
+import cardFieldReducer, { CardFieldAction } from "./CardFieldReducer";
 
 export const CardFieldContext = createContext<CardField | null>(null);
 export const CardFieldDispatchContext =
   createContext<React.Dispatch<CardFieldAction> | null>(null);
 
 const initialState = {
-  cardNumber: '',
-  expirationMonth: '',
-  expirationYear: '',
-  ownerName: '',
-  cvc: '',
-  cardPassword: '',
+  cardNumber: "",
+  expirationMonth: "",
+  expirationYear: "",
+  ownerName: "",
+  cvc: "",
+  cardPassword: "",
   cardCompany: null,
 };
 
@@ -34,7 +34,7 @@ export const useCardFieldContext = () => {
   const context = useContext(CardFieldContext);
   if (!context) {
     throw new Error(
-      'useCardFieldContext must be used within a CardFieldProvider'
+      "useCardFieldContext must be used within a CardFieldProvider"
     );
   }
   return context;
@@ -44,7 +44,7 @@ export const useCardFieldDispatchContext = () => {
   const context = useContext(CardFieldDispatchContext);
   if (!context) {
     throw new Error(
-      'useCardFieldDispatchContext must be used within a CardFieldProvider'
+      "useCardFieldDispatchContext must be used within a CardFieldProvider"
     );
   }
   return context;
