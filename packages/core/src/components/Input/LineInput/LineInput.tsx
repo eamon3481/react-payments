@@ -3,7 +3,7 @@ import { StyledLineInput } from "./LineInput.style";
 import { Colors } from "@/styles/colors";
 import { TextInputProps } from "../type";
 
-interface LineInputProps extends TextInputProps {
+export interface LineInputProps extends TextInputProps {
   lineColor?: Colors;
 }
 

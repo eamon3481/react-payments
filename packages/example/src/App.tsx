@@ -1,5 +1,11 @@
+import Payment from "@dongminahn/react-payments";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <Payment />
+    </>
+  );
 }
 
 export default App;

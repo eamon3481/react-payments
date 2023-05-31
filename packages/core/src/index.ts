@@ -1,1 +1,1 @@
-export * as default from "./index";
+export { default as Payment } from "./Payment";
