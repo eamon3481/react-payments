@@ -1,4 +1,4 @@
-import { PaymentProvider } from "./Providers";
+import { RootProvider } from "./Providers";
 import RouteComponent from "./RouteComponent";
 
 export type PaymentProps = {
@@ -9,9 +9,9 @@ export type PaymentProps = {
 
 const Payment = ({ price, onSuccess, onError }: PaymentProps) => {
   return (
-    <PaymentProvider>
+    <RootProvider>
       <RouteComponent />
-    </PaymentProvider>
+    </RootProvider>
   );
 };
 

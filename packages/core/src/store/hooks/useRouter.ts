@@ -1,4 +1,4 @@
-import { RouterContext } from "@/Providers/RouterProvider";
+import { RouterContext } from "@/Providers/RouteProvider/RouterProvider";
 import { useContext } from "react";
 
 const useRouter = () => {

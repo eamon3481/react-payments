@@ -14,6 +14,6 @@ const RouterProvider = ({ children }: RouterProviderProps) => {
   );
 };
 
-type RouterProviderProps = { children: JSX.Element | JSX.Element[] };
+type RouterProviderProps = React.PropsWithChildren<{}>;
 
 export default RouterProvider;
