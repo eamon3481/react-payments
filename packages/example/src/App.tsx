@@ -1,11 +1,7 @@
-import Payment from "@dongminahn/react-payments";
+import { Payment } from "@dongminahn/react-payments";
 
 function App() {
-  return (
-    <>
-      <Payment />
-    </>
-  );
+  return <Payment />;
 }
 
 export default App;

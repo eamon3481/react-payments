@@ -6,7 +6,7 @@ import { ACTION, useCardFieldDispatchContext } from "../../CardFieldContext";
 import { LABEL_TEXT } from "@/constants";
 import { Colors } from "@/styles/colors";
 import { CircleQuestionIcon } from "@/assets";
-import { isNotNumber } from "@/utils/validate";
+import { isNotNumber } from "@/utils";
 
 type CardCVCNumberFieldProps = {
   cvc: string;

@@ -10,7 +10,7 @@
     "type-check": "tsc --noEmit",
     "deploy": "yarn build && npm publish --access public"
   },
-  "main": "dist/index.js",
+  "main": "dist/react-payments.js",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",

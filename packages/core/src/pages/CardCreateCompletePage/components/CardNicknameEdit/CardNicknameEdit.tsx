@@ -4,6 +4,9 @@ import { CARD_LIST_ACTION, useCardListDispatch } from "@/store";
 import useCard from "@/store/hooks/useCard";
 import styled from "@emotion/styled";
 import { Input } from "@/components";
+import useRouterPush from "@/store/hooks/useRouterPush";
+import { ROUTE_ACTION } from "@/store/CardListAction";
+import { ROUTE } from "@/constants/route";
 
 type CardNicknameEditProps = {
   formId: string;
@@ -11,6 +14,7 @@ type CardNicknameEditProps = {
 };
 
 const CardNicknameEdit = ({ formId, cardId }: CardNicknameEditProps) => {
+  const push = useRouterPush();
   const { cardCompany, cardNickname } = useCard(cardId);
   const dispatch = useCardListDispatch();
   const maxCardNicknameLength = 10;
@@ -25,7 +29,7 @@ const CardNicknameEdit = ({ formId, cardId }: CardNicknameEditProps) => {
         cardNickname ? cardNickname : CARD_COMPANIES[cardCompany].name
       )
     );
-    // 카드 리스트 페이지로 이동
+    push(ROUTE_ACTION.PUSH(ROUTE.CARD));
   };
   return (
     <StyledForm id={formId} onSubmit={handleSubmit}>

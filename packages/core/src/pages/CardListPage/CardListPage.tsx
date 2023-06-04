@@ -3,12 +3,16 @@ import { useCardList } from "@/store";
 import { EmptyCardButton } from "@/components";
 import styled from "@emotion/styled";
 import { CardItem } from "./components";
+import useRouterPush from "@/store/hooks/useRouterPush";
+import { ROUTE_ACTION } from "@/store/CardListAction";
+import { ROUTE } from "@/constants/route";
 
 const CardListPage = () => {
   const cardList = useCardList();
+  const push = useRouterPush();
 
   const handleClick = () => {
-    //
+    push(ROUTE_ACTION.PUSH(ROUTE.CARD_CREATE));
   };
   return (
     <>

@@ -1,5 +1,3 @@
-import { typedKeysOf } from "@/utils/typed";
-
 export const LABEL_TEXT = {
   CVC: "보안 코드(CVC/CVV)",
   EXPIRATION_DATE: "만료일",
@@ -49,5 +47,3 @@ export const CARD_COMPANIES = {
     color: "green",
   },
 } as const;
-
-export const CARD_COMPANIES_ARRAY = typedKeysOf(CARD_COMPANIES);

@@ -20,7 +20,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: "src/index.ts",
-      name: "@react-payments/core",
+      name: "@dongminahn/react-payments",
       formats: ["es"],
     },
     rollupOptions: {

@@ -9,7 +9,7 @@ import styled from "@emotion/styled";
 import { TextButton } from "@/components";
 import { CardField } from "@/types";
 import { CARD_LIST_ACTION, useCardListDispatch } from "@/store";
-import { isMonth } from "@/utils/validate";
+import { isMonth } from "@/utils";
 import useRouterPush from "@/store/hooks/useRouterPush";
 import { ROUTE_ACTION } from "@/store/CardListAction";
 import { ROUTE } from "@/constants/route";

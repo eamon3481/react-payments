@@ -6,10 +6,9 @@ export const CardListContext = createContext<
   [CardInfo[], React.Dispatch<CardListAction>] | null
 >(null);
 
-const initialState: CardInfo[] = [];
-
 const CardListProvider = ({ children }: CardListProviderProps) => {
-  const reducer = useReducer(cardListReducer, initialState);
+  const initial: CardInfo[] = [];
+  const reducer = useReducer(cardListReducer, initial);
   return (
     <CardListContext.Provider value={reducer}>
       {children}

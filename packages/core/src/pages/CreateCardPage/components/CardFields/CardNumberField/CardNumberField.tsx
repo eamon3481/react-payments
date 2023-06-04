@@ -2,11 +2,7 @@ import { Label, Input } from "@/components";
 import React, { useCallback } from "react";
 import { useCardFieldDispatchContext } from "../../CardFieldContext/CardFieldContext";
 import { ACTION } from "../../CardFieldContext/CardFieldAction";
-import {
-  DASH,
-  addCardNumberDashes,
-  replaceCardNumberToDot,
-} from "@/utils/formatter";
+import { DASH, addCardNumberDashes, replaceCardNumberToDot } from "@/utils";
 import { LABEL_TEXT } from "@/constants";
 import { Colors } from "@/styles/colors";
 

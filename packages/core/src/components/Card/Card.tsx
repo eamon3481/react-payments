@@ -3,7 +3,7 @@ import {
   addCardNumberDashes,
   addSeparator,
   replaceCardNumberToO,
-} from "@/utils/formatter";
+} from "@/utils";
 import {
   CardBottom,
   CardChip,

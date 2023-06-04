@@ -1,11 +1,13 @@
 import { PaymentProvider } from "./Providers";
 import RouteComponent from "./RouteComponent";
-interface PaymentProps {
+
+export type PaymentProps = {
+  price?: number;
   onSuccess?: () => void;
   onError?: () => void;
-}
+};
 
-const Payment = ({ onSuccess, onError }: PaymentProps) => {
+const Payment = ({ price, onSuccess, onError }: PaymentProps) => {
   return (
     <PaymentProvider>
       <RouteComponent />

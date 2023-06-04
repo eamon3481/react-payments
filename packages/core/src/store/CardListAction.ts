@@ -1,11 +1,10 @@
-import { CARD_COMPANIES, CARD_COMPANIES_ARRAY } from "@/constants";
 import { CardField } from "@/types";
 import {
   AppendNewCardAction,
   DeleteCardAction,
   UpdateCardAction,
 } from "./CardListReducer";
-import { isCompanyValid } from "@/utils/typed";
+import { isCompanyValid } from "@/utils";
 import {
   RoutePushAction,
   RoutePushCardIDAction,

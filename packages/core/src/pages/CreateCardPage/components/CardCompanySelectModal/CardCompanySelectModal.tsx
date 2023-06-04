@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-import { CARD_COMPANIES, CARD_COMPANIES_ARRAY } from "@/constants";
+import { CARD_COMPANIES } from "@/constants";
 import ColorCircleRadio from "./ColorCircleRadio";
 import { ACTION, useCardFieldDispatchContext } from "../CardFieldContext";
 import { ModalChildrenProps } from "@/components/Modal/BottomModal";
-import { isCompanyName } from "@/utils/typed";
+import { CARD_COMPANIES_ARRAY, isCompanyName } from "@/utils";
 
 type CardCompanySelectModalProps = {
   selectedCardCompany: keyof typeof CARD_COMPANIES | null;

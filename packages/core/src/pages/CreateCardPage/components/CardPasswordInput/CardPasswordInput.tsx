@@ -3,7 +3,7 @@ import {
   CardPasswordDot,
   CardPasswordInputContainer,
 } from "./CardPasswordInput.style";
-import { isNotNumber } from "@/utils/validate";
+import { isNotNumber } from "@/utils";
 import { Input, TextInputProps } from "@/components";
 
 const CardPasswordInput = ({

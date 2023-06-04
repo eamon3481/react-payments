@@ -1,4 +1,3 @@
-import router from "@/router";
 import React, { createContext, useReducer, useState } from "react";
 import routerReducer, { Route, RouteAction } from "./routerReducer";
 

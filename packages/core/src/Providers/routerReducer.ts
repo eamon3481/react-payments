@@ -21,7 +21,7 @@ export type RoutePushAction = {
 
 export type RouteAction = RoutePushAction | RoutePushCardIDAction;
 
-const routerReducer = (state: Route, action: RouteAction) => {
+export const routerReducer = (state: Route, action: RouteAction) => {
   switch (action.type) {
     case "PUSH":
       return {

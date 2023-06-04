@@ -31,10 +31,8 @@ export type CardListAction =
 const cardListReducer = (state: CardInfo[], action: CardListAction) => {
   switch (action.type) {
     case "UPDATE":
-      // eslint-disable-next-line no-case-declarations
       const targetCard = state.find((card) => card.id === action.payload.id);
       if (!targetCard) throw new Error("targetCard is not found");
-      // eslint-disable-next-line no-case-declarations
       const hasKey = action.payload.key in targetCard;
       if (!hasKey)
         throw new Error(`${action.payload.key} is not a key of CardInfo`);

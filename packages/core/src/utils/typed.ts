@@ -1,4 +1,4 @@
-import { CARD_COMPANIES, CARD_COMPANIES_ARRAY } from "@/constants";
+import { CARD_COMPANIES } from "@/constants";
 import { CardField } from "@/types";
 
 export const typedKeysOf = <T extends Record<string, any>>(
@@ -6,6 +6,8 @@ export const typedKeysOf = <T extends Record<string, any>>(
 ): (keyof T)[] => {
   return Object.keys(obj) as (keyof T)[];
 };
+
+export const CARD_COMPANIES_ARRAY = typedKeysOf(CARD_COMPANIES);
 
 export const isCompanyName = (
   name: string

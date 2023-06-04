@@ -12,9 +12,9 @@ const PaymentProvider = ({
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <RouterProvider>
-        <CardListProvider>{children}</CardListProvider>
-      </RouterProvider>
+      <CardListProvider>
+        <RouterProvider>{children}</RouterProvider>
+      </CardListProvider>
     </ThemeProvider>
   );
 };
