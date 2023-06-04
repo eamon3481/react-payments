@@ -9,9 +9,9 @@ function App() {
         <PaymentModal.Modal isOpen={isModalOpen} onClose={onClose}>
           <Payment
             price={2000}
-            onSuccess={() => {
+            onSuccess={({ massage }) => {
+              alert(massage);
               onClose();
-              alert("결제 성공");
             }}
           />
         </PaymentModal.Modal>

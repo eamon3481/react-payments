@@ -3,7 +3,7 @@ import RouteComponent from "./RouteComponent";
 
 export type PaymentProps = {
   price: number;
-  onSuccess: () => void;
+  onSuccess: ({ massage }: { massage: string }) => void;
   onError?: () => void;
 };
 

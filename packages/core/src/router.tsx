@@ -3,9 +3,10 @@ import {
   CardListPage,
   CardCreateCompletePage,
   CardNicknameEditPage,
+  PaymentPage,
+  LoadingPage,
 } from "./pages";
 import { ROUTE } from "./constants/route";
-import PaymentPage from "./pages/PaymentPage/PaymentPage";
 
 const router = {
   [ROUTE.CARD]: <CardListPage />,
@@ -13,6 +14,7 @@ const router = {
   [ROUTE.CARD_CREATE_COMPLETE]: <CardCreateCompletePage />,
   [ROUTE.CARD_NICKNAME_EDIT]: <CardNicknameEditPage />,
   [ROUTE.PAYMENT]: <PaymentPage />,
+  [ROUTE.LOADING]: <LoadingPage />,
 } as const;
 
 export default router;

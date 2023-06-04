@@ -2,13 +2,17 @@ import usePayment from "@/store/hooks/usePrice";
 import PreviewCompleteCard from "../CardCreateCompletePage/components/PreviewCompleteCard/PreviewCompleteCard";
 import useRouter from "@/store/hooks/useRouter";
 import styled from "@emotion/styled";
+import useRouterPush from "@/store/hooks/useRouterPush";
+import { ROUTE_ACTION } from "@/store/CardListAction";
+import { ROUTE } from "@/constants/route";
 
 const PaymentPage = () => {
-  const { price, onSuccess } = usePayment();
+  const { price } = usePayment();
   const { slug } = useRouter();
+  const push = useRouterPush();
 
   const handleClick = () => {
-    onSuccess();
+    push(ROUTE_ACTION.PUSH(ROUTE.LOADING));
   };
 
   if (!slug) return <div>존재하지 않는 카드입니다.</div>;
