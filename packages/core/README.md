@@ -2,12 +2,12 @@
   <img src="https://techcourse-storage.s3.ap-northeast-2.amazonaws.com/0fefce79602043a9b3281ee1dd8f4be6" width="400">
 </p>
 <h2 align="middle">Payment</h2>
-<p align="middle">React 모바일 페이먼츠 애플리케이션</p>
+<p align="middle">React components for payments just Implementation of UI components</p>
 </p>
 
 ## 🚀 Getting Started
 
-```
+```tsx
 function App() {
   const { isModalOpen, onClose, onOpen } = PaymentModal.useModal();
   return (
@@ -84,7 +84,3 @@ npm install @ahndongmin/react-payment
 | LineInput        | value , onChange                                               |
 
 ---
-
-```
-
-```

@@ -1,7 +1,20 @@
 {
   "name": "@dongminahn/react-payments",
-  "version": "0.3.0",
+  "version": "0.3.3",
   "type": "module",
+  "license": "MIT",
+  "description": "React components for payments just Implementation of UI components",
+  "homepage": "https://github.com/eamon3481/react-payments",
+  "keywords": [
+    "react",
+    "payments",
+    "storybook",
+    "UI",
+    "vite",
+    "typescript",
+    "react-payments",
+    "emotion"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
