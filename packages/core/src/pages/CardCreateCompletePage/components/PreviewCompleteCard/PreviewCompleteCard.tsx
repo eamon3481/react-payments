@@ -11,14 +11,21 @@ const PreviewCompleteCard = ({ title, cardId }: PreviewCompleteCardProps) => {
   const card = useCard(cardId);
 
   return (
-    <section>
+    <PreviewSection>
       <PreviewTitle>{title}</PreviewTitle>
       <CompanyCard card={card} size="big" />
-    </section>
+    </PreviewSection>
   );
 };
 
 export default PreviewCompleteCard;
+
+const PreviewSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 
 const PreviewTitle = styled.h1`
   font-weight: 400;

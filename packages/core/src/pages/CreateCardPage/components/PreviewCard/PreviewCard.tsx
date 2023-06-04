@@ -2,12 +2,13 @@ import { CompanyCard } from "@/components/Card";
 import styled from "@emotion/styled";
 import React, { useCallback, useMemo, useState } from "react";
 import { useCardFieldContext } from "../CardFieldContext";
-import { BottomModal } from "@/components/Modal";
+import PaymentModal from "@/components/Modal";
 import CardCompanySelectFormModal from "../CardCompanySelectModal/CardCompanySelectModal";
+import { useModal } from "@/components/Modal/useModal";
 
 const PreviewCard = () => {
   const data = useCardFieldContext();
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const { isModalOpen, onClose, onOpen } = PaymentModal.useModal();
 
   const {
     cardNumber,
@@ -28,21 +29,13 @@ const PreviewCard = () => {
     [cardNumber, expirationMonth, expirationYear, ownerName, cardCompany]
   );
 
-  const onClose = useCallback(() => {
-    setIsModalOpen(false);
-  }, []);
-
-  const onOpen = useCallback(() => {
-    setIsModalOpen(true);
-  }, []);
-
   return (
     <PreviewCardContainer onClick={onOpen}>
       <CompanyCard size="big" card={card} />
       {isModalOpen && (
-        <BottomModal isOpen={isModalOpen} onClose={onClose}>
+        <PaymentModal.BottomModal isOpen={isModalOpen} onClose={onClose}>
           <CardCompanySelectFormModal selectedCardCompany={cardCompany} />
-        </BottomModal>
+        </PaymentModal.BottomModal>
       )}
     </PreviewCardContainer>
   );

@@ -1,1 +1,1 @@
-export { default as Payment } from "./src/Payment";
+export * from "./src";

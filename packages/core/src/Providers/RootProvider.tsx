@@ -5,6 +5,7 @@ import { ThemeProvider } from "@emotion/react";
 import RouterProvider from "./RouteProvider/RouterProvider";
 import { PaymentProps } from "@/Payment";
 import PaymentProvider from "./PaymentProvider/PaymentProvider";
+import React from "react";
 
 const RootProvider = ({
   children,
