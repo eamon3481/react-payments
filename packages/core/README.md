@@ -8,6 +8,8 @@
 ## 🚀 Getting Started
 
 ```tsx
+import { PaymentModal, Payment } from "@dongminahn/react-payments";
+
 function App() {
   const { isModalOpen, onClose, onOpen } = PaymentModal.useModal();
   return (
