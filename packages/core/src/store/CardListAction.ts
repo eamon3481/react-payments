@@ -5,11 +5,12 @@ import {
   UpdateCardAction,
 } from "./CardListReducer";
 import { isCompanyValid } from "@/utils";
+
+import router from "@/router";
 import {
   RoutePushAction,
   RoutePushCardIDAction,
-} from "@/Providers/routerReducer";
-import router from "@/router";
+} from "@/Providers/RouteProvider/routerReducer";
 
 export const ROUTE_ACTION = {
   PUSH: (path: keyof typeof router): RoutePushAction => ({

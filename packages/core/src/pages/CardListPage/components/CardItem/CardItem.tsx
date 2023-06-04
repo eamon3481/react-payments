@@ -18,10 +18,14 @@ const CardItem = ({ card }: { card: CardInfo }) => {
   const handleDelete = () => {
     dispatch(CARD_LIST_ACTION.DELETE_CARD(card.id));
   };
-
+  const handleCardClick = () => {
+    push(ROUTE_ACTION.PUSH_CARD_ID(ROUTE.PAYMENT, card.id));
+  };
   return (
     <StyledCardItem>
-      <CompanyCard card={card} size="small" />
+      <button onClick={handleCardClick}>
+        <CompanyCard card={card} size="small" />
+      </button>
       <CardItemBottom>
         <Nickname>{card.cardNickname}</Nickname>
       </CardItemBottom>
