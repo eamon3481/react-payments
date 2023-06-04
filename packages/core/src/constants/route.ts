@@ -4,4 +4,6 @@ export const ROUTE = {
   CARD_CREATE: "/card/create",
   CARD_CREATE_COMPLETE: "/card/create/cardId",
   CARD_NICKNAME_EDIT: "/card/edit/cardId",
+  PAYMENT: "/payment/cardId",
+  LOADING: "/loading",
 } as const;

@@ -7,7 +7,7 @@ export interface ModalChildrenProps {
   onClose: () => void;
 }
 
-const BottomModal = ({
+const DefaultModal = ({
   children,
   isOpen,
   onClose,
@@ -26,11 +26,11 @@ const BottomModal = ({
 
   return (
     <Modal
-      position="bottom"
+      position="center"
       isOpen={isOpen}
       backgroundClick={handelClickBackground}
     >
-      <BottomModalContainer
+      <DefaultModalContainer
         onClick={(e) => {
           e.stopPropagation();
         }}
@@ -40,24 +40,25 @@ const BottomModal = ({
         {cloneElement(children as React.ReactElement, {
           onClose: handelClickBackground,
         })}
-      </BottomModalContainer>
+      </DefaultModalContainer>
     </Modal>
   );
 };
 
-export default BottomModal;
+export default DefaultModal;
 
-const BottomModalContainer = styled.div<{
+const DefaultModalContainer = styled.div<{
   show: boolean;
 }>`
   width: 600px;
+  min-height: 700px;
+  display: flex;
 
   background-color: white;
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
   position: absolute;
 
   animation-name: ${({ show }) => (show ? openAnimation : closeAnimation)};
@@ -66,23 +67,19 @@ const BottomModalContainer = styled.div<{
 
 const openAnimation = keyframes`
     0% {
-        transform: translateY(100%);
         opacity: 0;
     }
     100% {
-        transform: translateY(0);
         opacity: 1;
     }
     `;
 
 const closeAnimation = keyframes`
   0% {
-    transform: translateY(0);
     opacity: 1;
   }
 
   100% {
-    transform: translateY(100%);
     opacity: 0;
   }
 `;

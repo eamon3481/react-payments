@@ -1,1 +1,1 @@
-export { default as PaymentProvider } from "./PaymentProvider";
+export { default as RootProvider } from "./RootProvider";

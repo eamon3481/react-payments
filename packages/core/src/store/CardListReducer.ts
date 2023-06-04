@@ -1,5 +1,10 @@
 import { CardInfo } from "@/types";
 
+export type InitializeCardListAction = {
+  type: "INITIALIZE";
+  payload: CardInfo[];
+};
+
 export type AppendNewCardAction = {
   type: "APPEND";
   payload: {
@@ -26,10 +31,13 @@ export type DeleteCardAction = {
 export type CardListAction =
   | DeleteCardAction
   | UpdateCardAction
-  | AppendNewCardAction;
+  | AppendNewCardAction
+  | InitializeCardListAction;
 
 const cardListReducer = (state: CardInfo[], action: CardListAction) => {
   switch (action.type) {
+    case "INITIALIZE":
+      return action.payload;
     case "UPDATE":
       const targetCard = state.find((card) => card.id === action.payload.id);
       if (!targetCard) throw new Error("targetCard is not found");

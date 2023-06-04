@@ -18,24 +18,38 @@ const CardItem = ({ card }: { card: CardInfo }) => {
   const handleDelete = () => {
     dispatch(CARD_LIST_ACTION.DELETE_CARD(card.id));
   };
+  const handleCardClick = () => {
+    push(ROUTE_ACTION.PUSH_CARD_ID(ROUTE.PAYMENT, card.id));
+  };
   return (
     <StyledCardItem>
-      <button onClick={handleClick}>
+      <button onClick={handleCardClick}>
         <CompanyCard card={card} size="small" />
       </button>
       <CardItemBottom>
         <Nickname>{card.cardNickname}</Nickname>
-        <DeleteButton onClick={handleDelete}>삭제</DeleteButton>
       </CardItemBottom>
+      <CardItemButtons>
+        <NickNameEditButton onClick={handleClick}>
+          닉네임 변경
+        </NickNameEditButton>
+        <DeleteButton onClick={handleDelete}>삭제</DeleteButton>
+      </CardItemButtons>
     </StyledCardItem>
   );
 };
+
+const CardItemButtons = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+`;
 
 const CardItemBottom = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   width: 100%;
 `;
 
@@ -43,9 +57,11 @@ const DeleteButton = styled.button`
   border: none;
   background-color: transparent;
   color: ${({ theme }) => theme.colors.red};
-  position: absolute;
-  right: 4px;
-  top: 16px;
+`;
+const NickNameEditButton = styled.button`
+  border: none;
+  background-color: transparent;
+  color: ${({ theme }) => theme.colors.primary};
 `;
 
 const Nickname = styled.p`

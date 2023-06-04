@@ -40,16 +40,18 @@ const CardFields = () => {
     push(ROUTE_ACTION.PUSH_CARD_ID(ROUTE.CARD_CREATE_COMPLETE, uniqueId));
   };
   return (
-    <CardFieldForm>
-      <CardNumberField cardNumber={cardNumber} fontColor={fontColor} />
-      <CardExpirationDateField
-        expirationMonth={expirationMonth}
-        expirationYear={expirationYear}
-        fontColor={fontColor}
-      />
-      <CardOwnerNameField ownerName={ownerName} fontColor={fontColor} />
-      <CardCVCNumberField cvc={cvc} fontColor={fontColor} />
-      <CardPasswordField cardPassword={cardPassword} fontColor={fontColor} />
+    <>
+      <CardFieldForm>
+        <CardNumberField cardNumber={cardNumber} fontColor={fontColor} />
+        <CardExpirationDateField
+          expirationMonth={expirationMonth}
+          expirationYear={expirationYear}
+          fontColor={fontColor}
+        />
+        <CardOwnerNameField ownerName={ownerName} fontColor={fontColor} />
+        <CardCVCNumberField cvc={cvc} fontColor={fontColor} />
+        <CardPasswordField cardPassword={cardPassword} fontColor={fontColor} />
+      </CardFieldForm>
       <TextButtonContainer>
         <TextButton
           text="다음"
@@ -58,7 +60,7 @@ const CardFields = () => {
           onClick={handleNextButtonClick}
         />
       </TextButtonContainer>
-    </CardFieldForm>
+    </>
   );
 };
 
@@ -66,6 +68,7 @@ export default CardFields;
 
 const CardFieldForm = styled.form`
   width: 100%;
+  flex: 1;
   label {
     display: block;
     margin-bottom: 12px;

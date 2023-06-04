@@ -21,17 +21,6 @@ const globalStyleCss = css`
     outline: none;
     cursor: pointer;
   }
-  body {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
-    justify-content: center;
-    background-color: #e5e5e5;
-    margin: 0;
-    height: 100%;
-  }
-
   p {
     margin: 0;
   }
@@ -42,21 +31,6 @@ const globalStyleCss = css`
     appearance: none;
     border: none;
     outline: none;
-  }
-
-  #root {
-    background-color: #fff;
-    width: 375px;
-    min-width: 375px;
-    flex: 1;
-    position: relative;
-    padding: 16px 24px;
-    overflow-y: scroll;
-    height: 100%;
-    &::-webkit-scrollbar {
-      width: 0px;
-      background-color: transparent;
-    }
   }
 `;
 
