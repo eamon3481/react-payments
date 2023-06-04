@@ -35,7 +35,8 @@ const CardListContainer = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  flex: 1;
+  overflow-y: auto;
   margin: 0;
   padding: 20px 0;
   li {
